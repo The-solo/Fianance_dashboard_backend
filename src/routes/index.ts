@@ -3,7 +3,7 @@ import { authenticate, requireRole } from "../middleware/auth";
 import { register, login } from "../controllers/authController";
 import { getUsers, updateUser, deleteUser } from "../controllers/userController";
 import { getRecords, getRecordById, createRecord, updateRecord, deleteRecord } from "../controllers/recordController";
-import { getSummary } from "../controllers/dashboardController";
+import { getSummary, getRecent } from "../controllers/dashboardController";
 
 const router = Router();
 
@@ -25,5 +25,6 @@ router.delete("/records/:id",authenticate, requireRole("admin"), deleteRecord);
 
 // dashboard
 router.get("/dashboard/summary", authenticate, getSummary);
+router.get("/dashboard/recent", authenticate, getRecent); //Recent 5 records
 
 export default router;
