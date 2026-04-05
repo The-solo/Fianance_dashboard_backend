@@ -1,7 +1,7 @@
 # Setup
 
 1. `npm install`
-2. `create the .env` and add the `DATABASE_URL` and `JWT_SECRET` and `PORT`
+2. `create the .env in the root` and add the `DATABASE_URL` and `JWT_SECRET` and `PORT`
 3. `npx prisma migrate dev --name init`
 4. `npm run dev`
 
@@ -18,7 +18,7 @@ Self-registration always creates a `viewer`.
 
 # The admin
 
-The admin is seeded into the primsa/seed.ts
+The admin, roles & some records is seeded into the primsa/seed.ts for the testing purpose.
 `Admin email : admin@financeApp.com`
 `Admin password : Admin#1234`
 
