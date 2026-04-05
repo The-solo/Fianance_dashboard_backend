@@ -1,7 +1,9 @@
 import express from "express";
 import routes from "./routes";
+import morgan from "morgan"
 
 const app = express();
+app.use(morgan("dev"))  // Adding the basic sever logging.
 app.use(express.json());
 app.use("/api", routes);
 
